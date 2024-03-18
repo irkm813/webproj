@@ -1,5 +1,142 @@
-h1 {
+body {
+	background-color:magenta;
+	color:white;
+  margin: 0;
+	padding:0;
+	background-image: url('pictures/background.png');
+  background-size:cover;
+	background-repeat:  no-repeat;
+  background-position:center center;
+  font-family: Arial, sans-serif;
+	text-align: center;
+	overflow-y: hidden;
+  height: 100%;
+  width: 100%;
+	
+  }
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+	margin:2em;
+  }
+.top-bar{
+	display:flex;
+  flex-direction: row;
+}
+.menu-bar {
+  margin-top:0;
+	flex:4;
+  background-color: rgba(0,0,0,0.5);
+	padding: 1em;
+  border-radius: 1em;
+  max-height: 3vh;
+}
 
-	color: blue;
+.menu-button{
+  margin-right:4em;
+}
 
+.main-logo{
+	flex:1;
+  margin-left:2em;
+}
+
+.main-logo img {
+  max-height: 15vh;
+  width: auto;
+}
+.content {
+  display: flex;
+  height: 85vh;  
+}
+.video-list{
+  text-align: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.65);
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding:1em;
+  border-radius: 1em;
+  justify-content: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.video-list iframe{
+  display: inline-block;
+  height: 80%;
+  width: auto;
+  margin-right: 1em;
+}
+
+.news {
+  flex: 4;
+  background-color: rgba(0,0,0,0.25);
+	padding:0.5em 2em 2em 2em;
+  overflow-y: auto;
+  border-radius: 1em;
+  }
+
+.news-block{
+  background-color: rgba(0,0,0,0.65);
+  display: flex;
+  flex-direction: row;
+  max-width: 100vw;
+  height: auto;
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+
+.news-picture {
+  display:inline-flex;
+  justify-content: center;
+}
+
+.news-picture img{
+	max-width: 20vw;
+	height: auto;
+  border-radius: 1em;
+}
+.news-textbox{
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: justify;
+  flex:5;
+}
+
+.news-text{
+  margin-bottom:5em;
+}
+
+.news-date, .news-char{
+  float:left;
+  margin-top:0.5em;
+}
+
+.news-author, .news-button{
+  float:right;
+  margin-top:0.5em;
+}
+
+.news-title{
+  padding-top: 1em;
+}
+
+.sidebar {
+    flex: 1;
+    margin-left:2em;
+    background-color: rgba(0,0,0,0.25);
+    border-radius: 1em;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+.sidebar img{
+  margin-top:1em;
+  max-height: 7vw;
+  width: auto;
 }
