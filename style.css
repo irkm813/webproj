@@ -18,7 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-	margin:2em;
+	margin:0.75em 2em 2em 2em;
   }
 .top-bar{
 	display:flex;
