@@ -1,27 +1,30 @@
-body{
+html{
     overflow: hidden;
+}
+
+body{
     text-align: center;
     color: white;
     background-image: url("Resources/Background/background_4k.png");
     background-size: cover;
-	background-repeat:  no-repeat;
+	background-repeat:  no-repeat
 }
 
 .rot30{
     transform: rotate(30deg);
-    margin: 20px;
+    margin: 0.2em;
     font-size:3.2em;
 }
 
 .rot45{
     transform: rotate(45deg);
-    margin: 20px;
+    margin: 0.2em;
     font-size:4.2em;
 }
 
 .rot83{
     transform: rotate(83deg);
-    margin: 20px;
+    margin: 0.2em;
     font-size:3.9em;
 }
 
@@ -36,36 +39,43 @@ body{
 .all-content{
     max-width: 98vw;
     margin-top: 1em;
-    overflow-x:scroll;
 }
 
 .menu-bar{
     background-color: rgba(0,0,0,0.5);
     border-radius: 1em;
-    max-width: 20vw;
-    margin:auto;
-    margin-bottom: 3em;
+    max-width: 30vw;
+    margin:2em;
+    margin-top: 0.5em;
 }
 
 .menu-bar img{
-    max-height: 5vw;
-    width: auto;
+    max-width: 5vw;
+    height: auto;
 }
 
 .main-logo{
-
+    margin: auto;
+    max-width: 20vw;
 }
 
 .video-box{
-    margin:1em 1em 3em 1em;
+    margin:1em 1em 2em 1em;
     background-color: rgba(0,0,0,0.65);
     border-radius: 1em;
+    padding: 0.5em;
 }
+
+.video-box iframe{
+    max-width: 15vw;
+    height: auto;
+    padding: 0;
+}
+
 
 .inner-news-column{
     background-color: rgba(0,0,0,0.25);
     border-radius: 1em;
-    overflow-y: auto;
     max-width: 75vw;
 }
 

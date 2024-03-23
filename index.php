@@ -11,7 +11,5 @@ $app->router->post('/login',[AuthController::class,'']);
 
 $app->run();
 
-
-
 ?>
 

@@ -47,7 +47,13 @@
                 <div class="row"><a href="">
                         <img src="Resources/Buttons/login_button.png" alt="">
                     </a></div>
-                <div class="row"><iframe src="https://www.eastrolog.com/ws/horoscope/v30hz48aL.php" style="width:Wpx;height:Hpx;margin:0;padding:0;border:none;"></iframe></div>
+                <div class="row">
+                    <form action="sendEmail.php" method="post">
+                        <label for="email">Enter your email:</label>
+                        <input type="email" id="email" name="email">
+                        <button type="submit">Send Email</button>
+                    </form>
+                </div>
                 <div class="row">
                     <p class="rot30">Zsolti</p>
                     <p class="rot45">Erik</p>
