@@ -9,94 +9,171 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="top-bar">
-            <div class="menu-bar">
-                <button class="menu-button">menu1</button>
-                <button class="menu-button">menu2</button>
-                <button class="menu-button">menu3</button>
-            </div>
+    <div class="container all-content">
 
-            <div class="main-logo">
-                <img src="./Resources/Logos/mb_shiro_logo.png" alt="">
+        <div class="row top-bar">
+            <div class="col-9 menu-area">
+                <div class="row menu-bar">
+                    <div class="col">
+                        <a href=""><img  class="img-fluid"  src="./Resources/Buttons/house_icon.png" alt=""></a>
+                        <p>home</p>
+                    </div>
+                    <div class="col">
+                        <a href=""><img  class="img-fluid"  src="./Resources/Buttons/pictures_icon.png" alt=""></a>
+                        <p>pictures</p>
+                    </div>
+                    <div class="col">
+                        <a href=""><img  class="img-fluid"  src="./Resources/Buttons/videos_icon.png" alt=""></a>
+                        <p>videos</p>
+                    </div>
+                    <div class="col">
+                        <a href=""><img  class="img-fluid"  src="./Resources/Buttons/aboutUs_icon.png" alt=""></a>
+                        <p>among us</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 main-logo">
+                <a href=""><img  class="img-fluid"  src="./Resources/Logos/mb_logo.png"></a>
             </div>
         </div>
 
-        <div class="content">
+        <div class="row content-area">
 
-            
-            <div class="news">
+            <div class="col-9 news-column">
 
-                <div class="video-list">
-                    <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk?si=fWixI1XwQk-dNXcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <iframe src="https://www.youtube.com/embed/_HjRyDRW-V0?si=TqqylVwwpEscIzLF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <iframe src="https://www.youtube.com/embed/_HjRyDRW-V0?si=TqqylVwwpEscIzLF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <iframe src="https://www.youtube.com/embed/_HjRyDRW-V0?si=TqqylVwwpEscIzLF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
+                <div class="inner-news-column container" id="please-scroll">
 
-                <div class="news-block">
-                    <div class="news-picture"><img src="./Resources/Templates/post_template_3.png"></div>
-                    <div class="news-textbox">
-                        <p class="news-date">2024-03-16</p>
-                        <p class="news-author">írta:Ferkó</p>
-                        <h1 class="news-title">Teszt üzenet</h1>
-                        <p class="news-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia earum, laborum odit necessitatibus repudiandae modi nobis, soluta delectus est doloremque rerum, sunt ratione saepe quaerat reprehenderit quam sed recusandae quisquam?</p>
-                        <p class="news-char">(még 14321 karakter)</p>
-                        <button class="news-button">Tovább</button>
+                    <div class="video-box">
+                        <div class="row">
+                            <div class="col embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/-wPg1tNEWmo?si=VN6IBrbMl7T7WQJu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="col embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/yWBzsBaU-Os?si=gr7nuURwakxwEYKO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="col embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/vMxYL4Cj85Y?si=AwY39DHE4ItDMMIq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="col embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/HnMGdz_vYDQ?si=76C3GB_vUvFQf1Nq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="news-article">
+                        <div class="row">
+                        <!-- Left main column -->
+                        <div class="col-3">
+                            <!-- Content here will match the combined height of the right column's rows -->
+                            <img class="img-fluid" src="./Resources/Templates/post_template_2.jpg" alt="">
+                        </div>
+                    
+                        <!-- Right main column -->
+                        <div class="col-9">
+                            <!-- First row of right column -->
+                            <div class="row">
+                            <div class="col-4 left">2024-12-12</div>
+                            <div class="col-4 left"></div>
+                            <div class="col-4 right">Írta: Feri</div>
+                            </div>
+                            
+                            <div class="row">
+                            <div class="col-4 left"><h1>Cikk címe</h1></div>
+                            </div>
+                            <div class="row left article-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus officia, reprehenderit harum eos maiores consequuntur cum laudantium! Dicta pariatur perferendis quibusdam, nemo laudantium tempora, velit iste laborum modi, commodi explicabo.</p>
+                            </div>
+                            <div class="row">
+                            <div class="col-4 left">(Még 152 karakter)</div>
+                            <div class="col-4"></div>
+                            <div class="col-4 right">tovább</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="news-article">
+                        <div class="row">
+                        <!-- Left main column -->
+                        <div class="col-3">
+                            <!-- Content here will match the combined height of the right column's rows -->
+                            <img class="img-fluid" src="./Resources/Templates/post_template_2.jpg" alt="">
+                        </div>
+                    
+                        <!-- Right main column -->
+                        <div class="col-9">
+                            <!-- First row of right column -->
+                            <div class="row">
+                            <div class="col-4 left">2024-12-12</div>
+                            <div class="col-4 left"></div>
+                            <div class="col-4 right">Írta: Feri</div>
+                            </div>
+                            
+                            <div class="row">
+                            <div class="col-4 left"><h1>Cikk címe</h1></div>
+                            </div>
+                            <div class="row left article-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus officia, reprehenderit harum eos maiores consequuntur cum laudantium! Dicta pariatur perferendis quibusdam, nemo laudantium tempora, velit iste laborum modi, commodi explicabo.</p>
+                            </div>
+                            <div class="row">
+                            <div class="col-4 left">(Még 152 karakter)</div>
+                            <div class="col-4"></div>
+                            <div class="col-4 right">tovább</div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="news-article">
+                        <div class="row">
+                        <!-- Left main column -->
+                        <div class="col-3">
+                            <!-- Content here will match the combined height of the right column's rows -->
+                            <img class="img-fluid" src="./Resources/Templates/post_template_2.jpg" alt="">
+                        </div>
+                    
+                        <!-- Right main column -->
+                        <div class="col-9">
+                            <!-- First row of right column -->
+                            <div class="row">
+                            <div class="col-4 left">2024-12-12</div>
+                            <div class="col-4 left"></div>
+                            <div class="col-4 right">Írta: Feri</div>
+                            </div>
+                            
+                            <div class="row">
+                            <div class="col-4 left"><h1>Cikk címe</h1></div>
+                            </div>
+                            <div class="row left article-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus officia, reprehenderit harum eos maiores consequuntur cum laudantium! Dicta pariatur perferendis quibusdam, nemo laudantium tempora, velit iste laborum modi, commodi explicabo.</p>
+                            </div>
+                            <div class="row">
+                            <div class="col-4 left">(Még 152 karakter)</div>
+                            <div class="col-4"></div>
+                            <div class="col-4 right">tovább</div>
+                            </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
-                
-                
-                <div class="news-block">
-                    <div class="news-picture"><img src="./Resources/Templates/post_template_4.jpg"></div>
-                    <div class="news-textbox">
-                        <p class="news-date">2024-03-12</p>
-                        <p class="news-author">írta:Ferkó</p>
-                        <h1 class="news-title">Vicces hír</h1>
-                        <p class="news-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia earum, laborum odit necessitatibus repudiandae modi nobis, soluta delectus est doloremque rerum, sunt ratione saepe quaerat reprehenderit quam sed recusandae quisquam?</p>
-                        <p class="news-char">(még 1432 karakter)</p>
-                        <button class="news-button">Tovább</button>
-                    </div>
-                </div>
-                
-                <div class="news-block">
-                    <div class="news-picture"><img src="./Resources/Templates/post_template_5.jpg"></div>
-                    <div class="news-textbox">
-                        <p class="news-date">2024-03-12</p>
-                        <p class="news-author">írta:Ferkó</p>
-                        <h1 class="news-title">Teszt 0.0</h1>
-                        <p class="news-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia earum, laborum odit necessitatibus repudiandae modi nobis, soluta delectus est doloremque rerum, sunt ratione saepe quaerat reprehenderit quam sed recusandae quisquam?</p>
-                        <p class="news-char">(még 121 karakter)</p>
-                        <button class="news-button">Tovább</button>
-                    </div>
-                </div> 
 
             </div>
-
-            <div class="sidebar">
-                <div class="login-box">
-                    <a href="">
-                        <img src="./Resources/Buttons/login_button.png" alt="">
-                        <h2>Bejelentkezés</h2>
-                    </a>
-                </div>
-                <div class="logos">
-                    <img src="./Resources/Logos/nerik_logo.png" alt="">
-                    <img src="./Resources/Logos/hawk_logo.png" alt="">
-                    <img src="./Resources/Logos/mb_shiro_logo.png" alt="">
-                </div>
-                <div class="most-popular-articles" >
-                    <h3>Legolvasottabb cikkek</h3>
-                    <p>valami - 2123 megtekintés</p>
-                    <p>valami - 2123 megtekintés</p>
-                    <p>valami - 2123 megtekintés</ps>
+            <div class="col-3 side-bar">
+                <div class="row"><a href="">
+                    <img src="Resources/Buttons/login_button.png" alt="">
+                </a></div>
+                <div class="row"><iframe src="https://www.eastrolog.com/ws/horoscope/v30hz48aL.php" style="width:Wpx;height:Hpx;margin:0;padding:0;border:none;"></iframe></div>
+                <div class="row">
+                    <p class="rot30">Zsolti</p>
+                    <p class="rot45">Erik</p>
+                    <p class="rot83">Feri</p>
                 </div>
             </div>
         </div>
+
 
     </div>
 
-</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
