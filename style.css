@@ -5,7 +5,7 @@ html{
 body{
     text-align: center;
     color: white;
-    background-image: url("Resources/Background/background_4k.png");
+    background-color: rgb(73, 70, 67);
     background-size: cover;
 	background-repeat:  no-repeat
 }
