@@ -10,24 +10,6 @@ body{
 	background-repeat:  no-repeat
 }
 
-.rot30{
-    transform: rotate(30deg);
-    margin: 0.2em;
-    font-size:3.2em;
-}
-
-.rot45{
-    transform: rotate(45deg);
-    margin: 0.2em;
-    font-size:4.2em;
-}
-
-.rot83{
-    transform: rotate(83deg);
-    margin: 0.2em;
-    font-size:3.9em;
-}
-
 .left{
     text-align: left;
 }
@@ -44,7 +26,6 @@ body{
 .menu-bar{
     background-color: rgba(0,0,0,0.5);
     border-radius: 1em;
-    max-width: 30vw;
     margin:2em;
     margin-top: 0.5em;
 }
@@ -64,6 +45,8 @@ body{
     background-color: rgba(0,0,0,0.65);
     border-radius: 1em;
     padding: 0.5em;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .video-box iframe{
@@ -105,3 +88,13 @@ body{
     height: calc(100vh - 110px);
     overflow-y: scroll;
   }
+
+  
+@media screen and (max-width: 768px) {
+
+    .video-box iframe{
+        max-width: 35vw;
+        height: auto;
+    }
+
+ }
