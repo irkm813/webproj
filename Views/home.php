@@ -17,105 +17,60 @@
         </div>
     </div>
 
-    <div class="news-article">
-        <div class="row">
-            <!-- Left main column -->
-            <div class="col-3">
-                <!-- Content here will match the combined height of the right column's rows -->
-                <img class="img-fluid" src="/Resources/Templates/post_template_2.jpg" alt="">
-            </div>
+    <?php
+        
+        $jsonFilePath = 'news.json';
+        // Read the file and decode the JSON to an associative array
+        $newsItems = json_decode(file_get_contents($jsonFilePath), true);
 
-            <!-- Right main column -->
-            <div class="col-9">
-                <!-- First row of right column -->
-                <div class="row">
-                    <div class="col-4 left">2024-12-12</div>
-                    <div class="col-4 left"></div>
-                    <div class="col-4 right">Írta: Feri</div>
-                </div>
+        if ($newsItems) {
+            foreach ($newsItems as $newsItem) {
 
-                <div class="row">
-                    <div class="col-4 left">
-                        <h1>Cikk címe</h1>
-                    </div>
-                </div>
-                <div class="row left article-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus officia, reprehenderit harum eos maiores consequuntur cum laudantium! Dicta pariatur perferendis quibusdam, nemo laudantium tempora, velit iste laborum modi, commodi explicabo.</p>
-                </div>
-                <div class="row">
-                    <div class="col-4 left">(Még 152 karakter)</div>
-                    <div class="col-4"></div>
-                    <div class="col-4 right">tovább</div>
-                </div>
-            </div>
-        </div>
-    </div>
+                echo '<div class="news-article">';
 
-    <div class="news-article">
-        <div class="row">
-            <!-- Left main column -->
-            <div class="col-3">
-                <!-- Content here will match the combined height of the right column's rows -->
-                <img class="img-fluid" src="/Resources/Templates/post_template_2.jpg" alt="">
-            </div>
+                    echo '<div class="row">';
 
-            <!-- Right main column -->
-            <div class="col-9">
-                <!-- First row of right column -->
-                <div class="row">
-                    <div class="col-4 left">2024-12-12</div>
-                    <div class="col-4 left"></div>
-                    <div class="col-4 right">Írta: Feri</div>
-                </div>
+                        echo '<div class="row col-md-3 justify-content-center">';
+                            echo '<img class="img-fluid" src="' . htmlspecialchars($newsItem['picture']) . '" alt="News image">';
+                        echo '</div>';
 
-                <div class="row">
-                    <div class="col-4 left">
-                        <h1>Cikk címe</h1>
-                    </div>
-                </div>
-                <div class="row left article-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus officia, reprehenderit harum eos maiores consequuntur cum laudantium! Dicta pariatur perferendis quibusdam, nemo laudantium tempora, velit iste laborum modi, commodi explicabo.</p>
-                </div>
-                <div class="row">
-                    <div class="col-4 left">(Még 152 karakter)</div>
-                    <div class="col-4"></div>
-                    <div class="col-4 right">tovább</div>
-                </div>
-            </div>
-        </div>
-    </div>
+                        echo '<div class="row col-md-9 justify-content-center">';
 
-    <div class="news-article">
-        <div class="row">
-            <!-- Left main column -->
-            <div class="col-3">
-                <!-- Content here will match the combined height of the right column's rows -->
-                <img class="img-fluid" src="/Resources/Templates/post_template_2.jpg" alt="">
-            </div>
+                            echo '<div class="row">';
+                                echo '<div class="col-6 left"><p>' . htmlspecialchars($newsItem['date']) . '</p></div>';
+                                echo '<div class="col-6 right"><p>Írta: ' . htmlspecialchars($newsItem['author']) . '</p></div>';
+                            echo '</div>';
 
-            <!-- Right main column -->
-            <div class="col-9">
-                <!-- First row of right column -->
-                <div class="row">
-                    <div class="col-4 left">2024-12-12</div>
-                    <div class="col-4 left"></div>
-                    <div class="col-4 right">Írta: Feri</div>
-                </div>
+                            echo '<div class="row">';
+                                echo '<div class="col-4 left">';
+                                    echo '<h2>' . htmlspecialchars($newsItem['title']) . '</h2>';
+                                echo '</div>';
+                            echo '</div>';
 
-                <div class="row">
-                    <div class="col-4 left">
-                        <h1>Cikk címe</h1>
-                    </div>
-                </div>
-                <div class="row left article-text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus officia, reprehenderit harum eos maiores consequuntur cum laudantium! Dicta pariatur perferendis quibusdam, nemo laudantium tempora, velit iste laborum modi, commodi explicabo.</p>
-                </div>
-                <div class="row">
-                    <div class="col-4 left">(Még 152 karakter)</div>
-                    <div class="col-4"></div>
-                    <div class="col-4 right">tovább</div>
-                </div>
-            </div>
-        </div>
-    </div>
+                            echo '<div class="row left article-text">';
+                                echo '<p>' . htmlspecialchars($newsItem['content']) . '</p>';
+                            echo '</div>';
+
+                            echo '<div class="row">';
+
+                                echo '<div class="col-6 left"';
+                                    echo'<p>(Még 532 karakter)</p>';
+                                echo '</div>';
+                                
+                                echo '<div class="col-6 right"';
+                                    echo'<p>Tovább</p>';
+                                echo '</div>';
+
+                            echo '</div>';
+
+                        echo '</div>';
+                    echo '</div>';
+                echo '</div>';
+            }
+        }
+        else {
+            echo '<p>Failed to load news items.</p>';
+        }
+    ?>
+
 </div>
