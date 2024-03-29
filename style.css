@@ -74,6 +74,7 @@ a, a:visited, a:hover, a:active {
     height: auto;
     padding: 0;
     border-radius: 1em;
+    background-color: black;
 }
 
 .inner-news-column{
@@ -116,6 +117,10 @@ a, a:visited, a:hover, a:active {
 
 .gallery-container{
     margin-top: 1em;
+}
+
+.gallery-image-container{
+    margin: auto;
 }
 
   

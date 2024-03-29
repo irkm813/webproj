@@ -10,7 +10,7 @@ foreach ($images as $image) {
 
   if ($counter%2==0){
 
-    echo '<div class="col-lg-4 col-md-12 mb-4 mb-lg-0">';
+    echo '<div class="col-lg-4 col-md-12 mb-4 mb-lg-0 align-baseline">';
   }
 
   echo 
