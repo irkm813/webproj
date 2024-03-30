@@ -29,4 +29,49 @@ $newsFeed = [
         "content" => "Lórum ipse mint üveret és virtona, mint vékos ajtás nagyon csisztó. Mindenütt jóságok, agócs, szép passzák, kodás, telem és utás. Kátus rondó nem szívesen pántott ide, és dakozott arra, aki majd helyette fongyongat. Arton egy acás parányból tortyogt ide, és most a szalan csapcsomácsor buruna. Mindenhova szégyes, mindent cizen és kérít, és szívesen szánomozik arról, amit tud... A szöszkezetén bodos, gida költ tősötésből ki lehetne macskosztatnia: ő a részer kezők két sentalan örösségének dósága, aki csak átmenetileg szekezett a léhampácsról mit sem gúnyos kömbegések közé. Nyarajoz a szerseber temat és térő okácsba. Számos jó dobazás, számos sentalan tilás és számos bilatlan szerán veregdez itt rá..",
     ],
 ];
+
+$sideBarData = [
+    [
+        "left" => "Tel:",
+        "right" => "+36&nbsp20/981-05-58",
+    ],
+    [
+        "left" => "Email:",
+        "right" => "tmallatvedo@gmail.com",
+    ],
+    [
+        "left" => "Cím:",
+        "right" => "7100&nbspSzekszárd,&nbspBogyiszlói&nbspút&nbsp8.",
+    ],
+    [
+        "left" => "Nyitvatartás:",
+        "right" => "hétfőtől szombatig 8:00 - 15:30",
+    ],
+    [
+        "left" => "Elveszett<br>kutya ügyében:",
+        "right" => "vasárnap 8:00 - 13:00",
+    ],
+    [
+        "left" => "Nyílt nap:",
+        "right" => "szombat 10:00 - 15:30",
+    ],
+    [
+        "left" => "Adószám:",
+        "right" => "18857632-1-17",
+    ],
+    [
+        "left" => "Iban:",
+        "right" => "HU3711746005-20009812-00000000",
+    ],
+    [
+        "left" => "SWIFT kód:",
+        "right" => "OTPV-HU-HB",
+    ],
+    [
+        "left" => "paypal: ",
+        "right" => "tmallatvedo@gmail.com",
+    ],      
+];
+
+
 ?>

@@ -18,7 +18,7 @@
 
     <?php
 
-        require "news.php";
+        include "raw-data.php";
         
         if ($newsFeed) {
             foreach ($newsFeed as $newsItem) {
@@ -27,11 +27,11 @@
 
                     echo '<div class="row">';
 
-                        echo '<div class="row col-md-3 justify-content-center">';
+                        echo '<div class="col-12 col-lg-3 justify-content-center">';
                             echo '<img class="img-fluid" src="'. $newsItem['picture'] .'" alt="News image">';
                         echo '</div>';
 
-                        echo '<div class="row col-md-9 justify-content-center">';
+                        echo '<div class="col-12 col-lg-9 justify-content-center">';
 
                             echo '<div class="row">';
                                 echo '<div class="col-6 left"><p>' . $newsItem['date'] . '</p></div>';

@@ -12,7 +12,7 @@
 <body>
     <div class="container all-content">
         <div class="row top-bar">
-            <div class="col-flex-12 col-md-9 menu-area">
+            <div class="col-flex-12 col-md-8 menu-area">
                 <div class="navbar menu-bar">
 
                     <div class="col menu-element d-none d-sm-block">
@@ -71,7 +71,7 @@
                 </div>
             </div>
 
-            <div class="col-3 d-none d-md-block">
+            <div class="col-4 d-none d-md-block">
                 <a href="https://www.kutyamenhely.info/">
                     <img src="/Content/Images/logo_title3.jpg" alt="">
                 </a>
@@ -80,36 +80,46 @@
 
         </div>
         <div class="row content-area">
-            <div class="col-12 col-md-9 news-column">
+            <div class="col-12 col-md-8 news-column">
                 <div class="inner-news-column container overflow-auto" id="please-scroll">
                     {{content}}
                 </div>
             </div>
 
 
-            <div class="col-3 d-none d-md-block side-bar">
-                <div class="row info-area">
-                    <div class="row">
-                        <div class="col-6">telefon</div>
-                        <div class="col-6">telefonszám</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">email</div>
-                        <div class="col-6">emailcim</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">lokacio</div>
-                        <div class="col-6">cimutszaminden</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">nyitvatartas</div>
-                        <div class="col-6">idopont-idopont</div>
+            <div class="col-4 d-none d-md-block side-bar">
+
+                <div class="row login-window">
+                    <p>Bejelentkezett valaki: <span>Maláj József</span></p>
+                    <div class="form-items">
+                    <form action="login">
+                        <div class="col-md-12">
+                            <input class="form-control" type="email" name="e-mail" placeholder="E-mail cím" required>
+                        </div>
+                        <div class="col-md-12">
+                            <input class="form-control" type="password" name="password" placeholder="E-mail cím" required>
+                        </div>
+                        <div class="form-button md-12">
+                                <button id="submit" type="submit" class="btn btn-primary">Küldés</button>
+                        </div>
+                    </form>
                     </div>
                 </div>
-                <div class="row">
-                    <p>Zsolti</p>
-                    <p>Erik</p>
-                    <p>Feri</p>
+
+                <div class="row info-area">
+                <?php
+                        include "raw-data.php";
+
+                        if($sideBarData){
+                            foreach ($sideBarData as $sideBarElement) {
+
+                                echo'<div class="row">';
+                                echo'<div class="row col-md-5">'. $sideBarElement["left"] .'</div>';
+                                echo'<div class="row col-md-7">'. $sideBarElement["right"] .'</div>';
+                                echo'</div>';
+                            }
+                        }
+                    ?>
                 </div>
             </div>
         </div>

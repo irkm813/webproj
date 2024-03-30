@@ -9,8 +9,7 @@ echo '<div class="row gallery-container">';
 foreach ($images as $image) {
 
   if ($counter%2==0){
-
-    echo '<div class="col-lg-4 col-md-12 mb-4 mb-lg-0 align-baseline">';
+    echo '<div class="col-lg-4 col-md-12 mb-4 mb-lg-0">';
   }
 
   echo 
@@ -26,6 +25,7 @@ foreach ($images as $image) {
   $counter = $counter+1;
 }
 
-echo '</div>' ;
+echo '</div>';
+echo '</div>';
 
 ?>
