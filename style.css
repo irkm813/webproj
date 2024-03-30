@@ -52,6 +52,11 @@ a, a:visited, a:hover, a:active {
     color: white;
 }
 
+.embed-responsive-16by9{
+    align-items: center;
+    margin: auto;
+}
+
 .main-logo{
     margin: auto;
     max-width: 20vw;
@@ -67,11 +72,20 @@ a, a:visited, a:hover, a:active {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     background-color: #f7ecc640;
+    padding: auto;
 }
 
 .video-box iframe{
     max-width: 14vw;
-    height: auto;
+    height: 15vh;
+    padding: 0;
+    border-radius: 1em;
+    background-color: black;
+}
+
+.video-box video{
+    max-width: 14vw;
+    height: 15vh;
     padding: 0;
     border-radius: 1em;
     background-color: black;
@@ -157,9 +171,16 @@ a, a:visited, a:hover, a:active {
 @media screen and (max-width: 768px) {
 
     .video-box iframe{
-        max-width: 50vw;
-        height: auto;
+        max-width: 40vw;
+        height: 20vh;
     }
+
+    .video-box video{
+        max-width: 40vw;
+        height: 20vh;
+    }
+
+
     .news-article img{
         height: auto;
         width: 55vw;

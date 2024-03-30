@@ -1,18 +1,25 @@
 
     <div class="video-box">
         <div class="row flex-nowrap">
-            <div class="col-7 col-md-3 embed-responsive-16by9">
+            <div class="col-7 col-md-3 embed-responsive-4by3">
                 <iframe src="https://www.youtube.com/embed/-wPg1tNEWmo?si=VN6IBrbMl7T7WQJu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="col-7 col-md-3 embed-responsive-16by9">
-                <iframe  src="/Content/Videos/vid01.mp4" title="Embed video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <video controls title="Embed video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    <source src="/Content/Videos/vid01.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                 </video>
             </div>
             <div class="col-7 col-md-3 embed-responsive-16by9">
                 <iframe src="https://www.youtube.com/embed/vMxYL4Cj85Y?si=AwY39DHE4ItDMMIq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="col-7 col-md-3 embed-responsive-16by9">
-                <iframe  src="/Content/Videos/vid02.mp4" title="Embed video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <video controls title="Embed video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    <source src="/Content/Videos/vid02.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                 </video>
             </div>
+
         </div>
     </div>
 
