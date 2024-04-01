@@ -4,6 +4,7 @@ body{
     background-color: white;
     overflow:hidden;
     height: 100%;
+    
 }
 
 a, a:visited, a:hover, a:active {
@@ -29,8 +30,24 @@ a, a:visited, a:hover, a:active {
     padding: 0;
 }
 
+#navbarNavAltMarkup{
+    background-color: rgb(15, 30, 73);
+    margin-left:1em;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    background-color: rgb(15, 30, 73);
+    color:white;
+    outline-color: black;
+    width: 100%;
+    margin-left:1em;
+}
+
+.nav-item p{
+    margin-bottom: 0;
+}
+
 .top-bar{
-    margin:0;
     padding:0.5em 0em 0em 0em;
     background-color: rgb(15, 30, 73);
     color:#f7ecc640;
@@ -38,18 +55,11 @@ a, a:visited, a:hover, a:active {
 }
 
 .menu-bar{
-    margin:0;
-    padding: 0;
     color: white;
-}
-
-.menu-element p{
-    margin:0;
     padding: 0;
-}
-
-.navbar-toggler-icon{
-    color: white;
+    margin: 0;
+    text-align: center;
+    background-color: rgb(15, 30, 73);
 }
 
 .embed-responsive-16by9{
@@ -60,6 +70,10 @@ a, a:visited, a:hover, a:active {
 .main-logo{
     margin: auto;
     max-width: 20vw;
+}
+
+.logo-container{
+    margin: auto;   
 }
 
 .video-box{
@@ -133,7 +147,15 @@ a, a:visited, a:hover, a:active {
     box-shadow: 5px 5px 10px;
     background-color: #f7ecc640;
     padding: 0.5em;
-    
+}
+
+.login-window-small{
+    border:1px solid black;
+    border-radius: 1em;
+    text-align: left;
+    margin: auto;
+    padding: 0.5em;
+    width: 70%;
 }
 
 .info-area{
@@ -170,6 +192,18 @@ a, a:visited, a:hover, a:active {
   
 @media screen and (max-width: 768px) {
 
+    #navbarNavAltMarkup{
+        margin-top:1em;
+    }
+
+    .navbar-nav{
+        margin-right: 1em;
+    }
+
+    .navbar-dark .navbar-nav .nav-link{
+        margin:auto;
+    }
+
     .video-box iframe{
         max-width: 40vw;
         height: 20vh;
@@ -203,12 +237,5 @@ a, a:visited, a:hover, a:active {
         width: 100%;
         height: auto;
         margin-right: 0.5em;
-    }
- }
-
- @media screen and (max-width: 576px){
-    .menu-bar{
-        text-align: right;
-        margin: auto;
     }
  }
