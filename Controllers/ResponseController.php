@@ -1,13 +1,11 @@
 <?php
 
-class ResponseController {
-
-
-
-
+class ResponseController
+{
 
     // Special responses
-    public function setHttpStatus(int $code){
+    public function setHttpStatus(int $code)
+    {
         http_response_code($code);
     }
 
@@ -16,5 +14,3 @@ class ResponseController {
         header("Location: $url");
     }
 }
-
-?>

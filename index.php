@@ -8,12 +8,11 @@ $app->router->get('/gallery','gallery');
 $app->router->get('/contact','contact');
 $app->router->get('/messages','messages');
 
-$app->router->get('/register',[ResponseController::class,'']);
-$app->router->get('/login',[ResponseController::class,'']);
-$app->router->post('/register',[AuthController::class,'']);
-$app->router->post('/login',[AuthController::class,'']);
+$app->router->get('/register',"register");
+$app->router->get('/login',"login");
+$app->router->post('/register',[AuthController::class,'register']);
+$app->router->post('/login',[AuthController::class,'login']);
+$app->router->post('/logout',[AuthController::class,'logout']);
 
 $app->run();
-
 ?>
-
