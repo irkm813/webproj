@@ -26,20 +26,31 @@ include "raw-data.php";
                         <div class="navbar-nav">
 
                             <div class="row login-window-small col-12 d-block d-md-none ">
-                                <p>Bejelentkezve mint: <span>Maláj József</span></p>
+                            <?php if (isset($_SESSION["user"])) { ?>
+                        <p>Bejelentkezve mint: <span><?= $_SESSION["user"]["first_name"] ?> <?= $_SESSION["user"]["last_name"] ?></span></p>
+                        <form action="/logout" method="post">
+                            <button id="submit" type="submit" class="btn btn-primary">Kijelentkezés</button>
+                        </form>
+                    <?php
+                    } else {   ?>
                                 <div class="form-items">
                                     <form action="login" method="POST">
                                         <div class="col-md-12">
-                                            <input class="form-control" type="email" name="e-mail" placeholder="E-mail cím" required>
+                                            <input class="form-control" type="email" name="email" placeholder="E-mail cím" required>
                                         </div>
                                         <div class="col-md-12">
                                             <input class="form-control" type="password" name="password" placeholder="Jelszó" required>
                                         </div>
-                                        <div class="form-button md-12">
-                                            <button id="submit" type="submit" class="btn btn-primary">Küldés</button>
+                                        <div class="form-button sx-12">
+                                            <button id="submit" type="submit" class="btn btn-primary">Bejelentkezés</button>
+                                        </div>
+                                        <div class="form-button sx-12">
+                                            <button id="submit" type="button" onclick="window.location.href='/register'" class="btn btn-primary">Regisztáció</button>
                                         </div>
                                     </form>
                                 </div>
+                                <?php
+                                }?>
                             </div>
                             <?php
                             if ($menuItems)
@@ -86,6 +97,7 @@ include "raw-data.php";
                                 </div>
                                 <div class="form-button md-12">
                                     <button id="submit" type="submit" class="btn btn-primary">Bejelentkezés</button>
+                                    <button id="submit" type="button" onclick="window.location.href='/register'" class="btn btn-primary">Regisztáció</button>
                                 </div>
                             </form>
                         </div>

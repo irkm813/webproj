@@ -117,3 +117,30 @@ $menuItems = [
         "permission" => "Admin",
     ],
 ];
+
+$registrationErrors = [
+    0 => [
+        "style" => "success",
+        "text" => "Sikeres regisztáció!"
+    ],
+    1 => [
+        "style" => "danger",
+        "text" => "Ismeretlen hiba lépett fel!"
+    ],
+    2 => [
+        "style" => "danger",
+        "text" => "Adatbázis probléma! Kérjük próbálkozzon később!"
+    ],
+    3 => [
+        "style" => "danger",
+        "text" => "A megadott jelszavak nem egyeznek!"
+    ],
+    4 => [
+        "style" => "danger",
+        "text" => " Minden mező kitöltése kötelező!"
+    ],
+    5 => [
+        "style" => "danger",
+        "text" => "A megadott email cím már foglalt!"
+    ],
+];
