@@ -26,31 +26,31 @@ include "raw-data.php";
                         <div class="navbar-nav">
 
                             <div class="row login-window-small col-12 d-block d-md-none ">
-                            <?php if (isset($_SESSION["user"])) { ?>
-                        <p>Bejelentkezve mint: <span><?= $_SESSION["user"]["first_name"] ?> <?= $_SESSION["user"]["last_name"] ?></span></p>
-                        <form action="/logout" method="post">
-                            <button id="submit" type="submit" class="btn btn-primary">Kijelentkezés</button>
-                        </form>
-                    <?php
-                    } else {   ?>
-                                <div class="form-items">
-                                    <form action="login" method="POST">
-                                        <div class="col-md-12">
-                                            <input class="form-control" type="email" name="email" placeholder="E-mail cím" required>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <input class="form-control" type="password" name="password" placeholder="Jelszó" required>
-                                        </div>
-                                        <div class="form-button sx-12">
-                                            <button id="submit" type="submit" class="btn btn-primary">Bejelentkezés</button>
-                                        </div>
-                                        <div class="form-button sx-12">
-                                            <button id="submit" type="button" onclick="window.location.href='/register'" class="btn btn-primary">Regisztáció</button>
-                                        </div>
+                                <?php if (isset($_SESSION["user"])) { ?>
+                                    <p>Bejelentkezve mint: <span><?= $_SESSION["user"]["first_name"] ?> <?= $_SESSION["user"]["last_name"] ?></span></p>
+                                    <form action="/logout" method="post">
+                                        <button id="submit" type="submit" class="btn btn-primary">Kijelentkezés</button>
                                     </form>
-                                </div>
                                 <?php
-                                }?>
+                                } else {   ?>
+                                    <div class="form-items">
+                                        <form action="login" method="POST">
+                                            <div class="col-md-12">
+                                                <input class="form-control" type="email" name="email" placeholder="E-mail cím" required>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <input class="form-control" type="password" name="password" placeholder="Jelszó" required>
+                                            </div>
+                                            <div class="form-button sx-12">
+                                                <button id="submit" type="submit" class="btn btn-primary">Bejelentkezés</button>
+                                            </div>
+                                            <div class="form-button sx-12">
+                                                <button id="submit" type="button" onclick="window.location.href='/register'" class="btn btn-primary">Regisztáció</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                <?php
+                                } ?>
                             </div>
                             <?php
                             if ($menuItems)
@@ -74,6 +74,13 @@ include "raw-data.php";
         <div class="row content-area">
             <div class="col-12 col-md-8 news-column">
                 <div class="inner-news-column container overflow-auto" id="please-scroll">
+                    <?php
+                    if (isset($_GET["error"])) { ?>
+                        <div class="alert alert-<?= $loginErrors[$_GET["error"]]["style"] ?>" role="alert">
+                            <?= $loginErrors[$_GET["error"]]["text"] ?>
+                        </div>
+                    <?php } ?>
+
                     {{content}}
                 </div>
             </div>

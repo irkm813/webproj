@@ -144,3 +144,22 @@ $registrationErrors = [
         "text" => "A megadott email cím már foglalt!"
     ],
 ];
+
+$loginErrors = [
+    0 => [
+        "style" => "success",
+        "text" => "Sikeres bejelentkezés!"
+    ],
+    1 => [
+        "style" => "danger",
+        "text" => "A megadott adatok helytelenek!"
+    ],
+    2 => [
+        "style" => "danger",
+        "text" => "Adatbázis probléma! Kérjük próbálkozzon később!"
+    ],
+    3 => [
+        "style" => "danger",
+        "text" => "E-mail cím és jelszó megadása kötelező!"
+    ],
+];

@@ -51,13 +51,15 @@ class AuthController
                         "email" => $user["email"],
                         "permission" => $user["permission"],
                     ];
-                    header("Location:/");
+                    header("Location:/?error=0");
                 } else {
-                    header("Location:/login?error=1");
+                    header("Location:/?error=1");
                 }
             } else {
-                header("Location:/login?error=2");
+                header("Location:/?error=2");
             }
+        }else{
+            header("Location:/?error=3");
         }
     }
 
