@@ -74,13 +74,6 @@ include "raw-data.php";
         <div class="row content-area">
             <div class="col-12 col-md-8 news-column">
                 <div class="inner-news-column container overflow-auto" id="please-scroll">
-                    <?php
-                    if (isset($_GET["error"])) { ?>
-                        <div class="alert alert-<?= $loginErrors[$_GET["error"]]["style"] ?>" role="alert">
-                            <?= $loginErrors[$_GET["error"]]["text"] ?>
-                        </div>
-                    <?php } ?>
-
                     {{content}}
                 </div>
             </div>
