@@ -2,7 +2,6 @@
 
 class RequestController
 {
-
     public function getPath()
     {
         $path = $_SERVER['REQUEST_URI'] ?? '/';

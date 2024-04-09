@@ -24,16 +24,16 @@ class AuthController
                         } else {
                             header("Location:/register?error=1");
                         }
-                    }else{
+                    } else {
                         header("Location:/register?error=5");
                     }
                 } else {
                     header("Location:/register?error=2");
                 }
-            }else{
+            } else {
                 header("Location:/register?error=3");
             }
-        }else{
+        } else {
             header("Location:/register?error=4");
         }
     }
@@ -58,7 +58,7 @@ class AuthController
             } else {
                 header("Location:/login?error=2");
             }
-        }else{
+        } else {
             header("Location:/login?error=3");
         }
     }
@@ -87,9 +87,6 @@ class AuthController
         }
         return false;
     }
-
-
-
     /*
      public function checkLogin()
     {

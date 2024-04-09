@@ -10,10 +10,11 @@ class RouterController
 
     protected array $routes = [];
 
-    public function __construct(RequestController $request, ResponseController $response)
+    public function __construct(RequestController $request,ResponseController $response)
     {
-        $this->response = $response;
         $this->request = $request;
+        $this->response = $response;
+
     }
 
     public function get($path, $callback)
