@@ -48,7 +48,7 @@ $sideBarData = [
         "right" => "hétfőtől szombatig 8:00 - 15:30",
     ],
     [
-        "left" => "Elveszett<br>kutya ügyében:",
+        "left" => "Elveszett kutya ügyében:",
         "right" => "vasárnap 8:00 - 13:00",
     ],
     [
