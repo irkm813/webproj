@@ -3,8 +3,8 @@ body{
     color: rgb(15, 30, 73);
     background-color: white;
     overflow:hidden;
-    height: 100%;
-    
+    height: 100%; 
+    overflow: scroll;
 }
 
 a, a:visited, a:hover, a:active {
@@ -178,8 +178,8 @@ a, a:visited, a:hover, a:active {
     box-shadow: 5px 5px 10px;
 }
 
-.gallery-container img{
-    margin: 0;
+#messageContainer input{
+    height: 15em;
 }
 
 .form-body{
@@ -188,6 +188,10 @@ a, a:visited, a:hover, a:active {
 
 .form-control{
     margin-bottom: 0.5em;
+}
+
+.info-area iframe{
+    border-radius: 2em;
 }
   
 @media screen and (max-width: 768px) {

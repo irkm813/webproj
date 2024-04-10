@@ -29,5 +29,10 @@ $images = glob($pattern, GLOB_BRACE);
           }
           $counter = $counter + 1;
         }
+
+        if ($counter%2 == 1){ ?>
+          </div>
+        <?php
+        }
       ?>
 </div>
