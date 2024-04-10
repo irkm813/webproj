@@ -13,9 +13,6 @@ if (isset($_GET["error"])) {?>
             <input class="form-control" type="string" name="username" placeholder="Felhasználónév" required>
         </div>
         <div class="form-group col-md-12">
-            <input class="form-control" type="email" name="email" placeholder="E-mail cím" required>
-        </div>
-        <div class="form-group col-md-12">
             <input class="form-control" type="string" name="first_name" placeholder="Családneve" required>
         </div>
         <div class="form-group col-md-12">

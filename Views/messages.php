@@ -1,1 +1,3 @@
-<h1>messages</h1>
+<h1>Üzenetek</h1>
+
+Folyt köv....

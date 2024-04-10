@@ -5,14 +5,14 @@
                 <div class="form-content">
                     <div class="form-items">
                         <h3>Küldjün nekünk üzenetet</h3>
-                        <form class="requires-validation" novalidate>
+                        <form class="requires-validation" method="post" action="/sendcontactform" novalidate>
 
                             <div class="col-md-12">
                                <input class="form-control" type="text" name="lastName" placeholder="Vezetéknév" required>
                                <div class="valid-feedback">Username field is valid!</div>
                                <div class="invalid-feedback">Username field cannot be blank!</div>
                             </div>
-
+                            
                             <div class="col-md-12">
                                <input class="form-control" type="text" name="firstName" placeholder="Keresztnév" required>
                                <div class="valid-feedback">Username field is valid!</div>
@@ -38,7 +38,7 @@
                             </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                          <input class="form-check-input" type="checkbox" value="" name="invalidCheck" id="invalidCheck" required>
                           <label class="form-check-label">Megerősítem, hogy minden adat megfelel a valóságnak</label>
                          <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
                         </div>

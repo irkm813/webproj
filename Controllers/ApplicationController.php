@@ -4,6 +4,7 @@ require_once "./Controllers/RouterController.php";
 require_once "./Controllers/ResponseController.php";
 require_once "./Controllers/AuthController.php";
 require_once "./Controllers/ImageController.php";
+require_once "./Controllers/ContactController.php";
 
 class ApplicationController{
 

@@ -55,6 +55,7 @@ class AuthController
                         "first_name" => $user["first_name"],
                         "last_name" => $user["last_name"],
                         "username" => $user["username"],
+                        "id" => $user["ID"],
                     ];
                     header("Location:/login?error=0");
                 } else {
