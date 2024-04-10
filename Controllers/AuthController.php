@@ -19,10 +19,14 @@ class AuthController
                 $pw = $this->hashPassword($_POST['password']);
                 if ($conn) {
                     if (!$this->getUserData($_POST["email"], $conn)) {
-                        if ($result = $conn->query("INSERT INTO `users`(`email`,`password`, `first_name`, `last_name`, `permission`) VALUES ('" . $_POST["email"] . "','" . $pw . "','" . $_POST["first_name"] . "','" . $_POST["last_name"] . "','0')")) {
-                            header("Location:/register?error=0");
-                        } else {
-                            header("Location:/register?error=1");
+                        try {
+                            if ($result = $conn->query("INSERT INTO cstpteam.users (username, password, last_name, first_name) VALUES ('" . $_POST["username"] . "','" . $pw . "','" . $_POST["last_name"] . "','" . $_POST["first_name"] . "')")) {
+                                header("Location:/register?error=0");
+                            } else {
+                                header("Location:/register?error=1");
+                            }
+                        } catch (Exception $e) {
+                            header("Location:/register?error=2");
                         }
                     } else {
                         header("Location:/register?error=5");
@@ -40,16 +44,17 @@ class AuthController
 
     public function login()
     {
-        if (isset($_POST["email"]) && isset($_POST["password"])) {
+
+        if (isset($_POST["username"]) && isset($_POST["password"])) {
             $conn = $this->db->connect();
+            var_dump($conn);
             if ($conn) {
-                $user = $this->getUserData($_POST["email"], $conn);
+                $user = $this->getUserData($_POST["username"], $conn);
                 if ($user && $this->passwordCompare($_POST["password"], $user['password'])) {
                     $_SESSION["user"] = [
                         "first_name" => $user["first_name"],
                         "last_name" => $user["last_name"],
-                        "email" => $user["email"],
-                        "permission" => $user["permission"],
+                        "username" => $user["username"],
                     ];
                     header("Location:/login?error=0");
                 } else {
@@ -79,13 +84,16 @@ class AuthController
         return password_hash($pw, PASSWORD_DEFAULT);
     }
 
-    private function getUserData($email, $conn)
+    private function getUserData($username, $conn)
     {
-        if ($result = $conn->query("SELECT * from users where email = '$email'")) {
-            if ($result->num_rows > 0) return $result->fetch_assoc();
+        try {
+            if ($result = $conn->query("SELECT * from users where username = '$username'")) {
+                if ($result->num_rows > 0) return $result->fetch_assoc();
+                return false;
+            }
+        } catch (Exception $e) {
             return false;
         }
-        return false;
     }
     /*
      public function checkLogin()

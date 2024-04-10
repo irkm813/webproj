@@ -31,4 +31,3 @@ $images = glob($pattern, GLOB_BRACE);
         }
       ?>
 </div>
-</div>

@@ -9,6 +9,9 @@ if (isset($_GET["error"])) {?>
 <h2>Regisztáció</h2>
 <form action="register" method="post">
     <div class="form-row">
+    <div class="form-group col-md-12">
+            <input class="form-control" type="string" name="username" placeholder="Felhasználónév" required>
+        </div>
         <div class="form-group col-md-12">
             <input class="form-control" type="email" name="email" placeholder="E-mail cím" required>
         </div>

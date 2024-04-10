@@ -9,6 +9,9 @@ class DatabaseController {
             if (mysqli_connect_error()) return false;
             return $c;
         }catch(Exception $e){
+            echo "<pre>";
+            var_dump($e);
+            echo "</pre>";
             return false;
         }
 
