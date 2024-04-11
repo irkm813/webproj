@@ -26,8 +26,6 @@ Speciális válaszokkal kapcsolatos függvények/eljárások osztálya.
 - setHttpStatus(int $code) – Státuszkód visszaküldése. (pld: 200,400,404 stb..)
 - redirect($url) – Oldal átirányítása, $url-ben megadott címre.
 
-
-
 Felhasználó kezelés (Authentication)
 
 Alapelv:
@@ -36,3 +34,13 @@ A regisztrációnál megadott adatok MySQL adatbázisban kerülnek tárolásra. 
 Bejelentkezéskor az oldal egy session-ban tárolja el az adatokat, így a böngésző bezárását követően újra bejelentkezni szükséges az oldalra.
 Regisztráció vagy bejelentkezés során történt hiba esetén megfelelő hibakezelés. Felhasználó értesítése a hibáról.
 Megvalósítás:
+ Az ApplicatonController példányosítja az AuthController osztályt.  Az index.php-ben előre definiáltak szerint a  /register, /login és /logout POST kéréseket az AuthController egyes eljárásai kezelik le.
+A POST kérések a frontend oldalon elkészített HTML űrlapok beküldése során keletkeznek.
+Az AuthController beimportálja és példányosítja a DatabaseController-t, amely felelős a MySQLi kapcsolatért.
+AuthController:
+-register() - /register POST kérés esetén kerül meghívásra, ellenőrzi a kapott és várt adatok hiánytalanságát, a jelszavak egyezőségét, illetve hogy a regisztálni kívánt felhasználónév nem-e foglalt. Amennyiben minden ellenőrzés sikeres volt létrehozza a felhasználót az adatbázisban.
+- login() - /login POST kérés esetén kerül meghívásra, ellenőrzi a kapott és várt adatok hiánytalanságát, a jelszavak egyezőségét valamint a felhasználó létezését az adatbázisban. Sikeres ellenőrzések esetén létrehozza a megfelelő session-t a felhasználónak.
+-logout() -  Törli az összes sessiont, ezzel kijelentkeztetve a felhasználót.
+-passwordCompare() – Összeveti a felhasználó által megadott jelszó kódolt értékét az adatbázisban tárolttal. Igaz/hamis értékekkel tér vissza.
+-hashPassword($pw) – bcrypt kódolja a $pw változóban kapott értéket, majd visszatér a kódolt szöveggel.
+-getUserData($username, $conn) – Lekérdezi az adatbázisból a $username paraméterből kapott felhasználót. Találat esetén visszatér a felhasználó adataival, egyéb esetben ’hamis’ értékkel tér vissza.
