@@ -16,6 +16,7 @@ $app->router->post('/login',[AuthController::class,'login']);
 $app->router->post('/logout',[AuthController::class,'logout']);
 $app->router->post('/uploadimg',[ImageController::class,'upload']);
 $app->router->post('/sendcontactform',[ContactController::class,'send']);
+$app->router->get('/getMessages',[ContactController::class,'getMessages']);
 
 $app->run();
 ?>

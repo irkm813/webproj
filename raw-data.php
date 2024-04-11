@@ -141,7 +141,7 @@ $registrationErrors = [
     ],
     5 => [
         "style" => "danger",
-        "text" => "A megadott email cím már foglalt!"
+        "text" => "A megadott felhasználónév már foglalt!"
     ],
 ];
 

@@ -119,7 +119,7 @@ include "raw-data.php";
                     }
                     ?>
                 </div>
-                <div class="row googlemap">
+                <div class="row info-area">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2753.7930396318!2d18.724118077434603!3d46.353651773653766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4742ee169bdb3ae9%3A0xfc39fc043134fb3!2sSzeksz%C3%A1rdi%20Kutyamenhely!5e0!3m2!1shu!2shu!4v1712686132488!5m2!1shu!2shu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>

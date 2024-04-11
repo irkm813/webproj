@@ -5,10 +5,12 @@ class AuthController
 {
 
     public DatabaseController $db;
+    public ResponseController $response;
 
-    public function __construct()
+    public function __construct(ResponseController $response)
     {
         $this->db = new DatabaseController();
+        $this->response = $response;
     }
 
     public function register()
@@ -18,27 +20,27 @@ class AuthController
             if ($_POST["password"] == $_POST["password_confirmation"]) {
                 $pw = $this->hashPassword($_POST['password']);
                 if ($conn) {
-                    if (!$this->getUserData($_POST["email"], $conn)) {
+                    if (!$this->getUserData($_POST["username"], $conn)) {
                         try {
                             if ($result = $conn->query("INSERT INTO cstpteam.users (username, password, last_name, first_name) VALUES ('" . $_POST["username"] . "','" . $pw . "','" . $_POST["last_name"] . "','" . $_POST["first_name"] . "')")) {
-                                header("Location:/register?error=0");
+                                $this->response->redirect("/register?error=0");
                             } else {
-                                header("Location:/register?error=1");
+                                $this->response->redirect("/register?error=1");
                             }
                         } catch (Exception $e) {
-                            header("Location:/register?error=2");
+                            $this->response->redirect("/register?error=2");
                         }
                     } else {
-                        header("Location:/register?error=5");
+                        $this->response->redirect("/register?error=5");
                     }
                 } else {
-                    header("Location:/register?error=2");
+                    $this->response->redirect("/register?error=2");
                 }
             } else {
-                header("Location:/register?error=3");
+                $this->response->redirect("/register?error=3");
             }
         } else {
-            header("Location:/register?error=4");
+            $this->response->redirect("/register?error=4");
         }
     }
 
@@ -57,22 +59,22 @@ class AuthController
                         "username" => $user["username"],
                         "id" => $user["ID"],
                     ];
-                    header("Location:/login?error=0");
+                    $this->response->redirect("/login?error=0");
                 } else {
-                    header("Location:/login?error=1");
+                    $this->response->redirect("/login?error=1");
                 }
             } else {
-                header("Location:/login?error=2");
+                $this->response->redirect("/login?error=2");
             }
         } else {
-            header("Location:/login?error=3");
+            $this->response->redirect("/login?error=3");
         }
     }
 
     public function logout()
     {
         session_unset();
-        header("Location:/");
+        $this->response->redirect("/");
     }
 
     private function passwordCompare($pw1, $pw2)

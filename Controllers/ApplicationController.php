@@ -13,16 +13,16 @@ class ApplicationController{
     public ResponseController $response;
     public AuthController $auth;
     public ImageController $img;
-
+    public ContactController $contact;
 
     public function __construct()
     {
         $this->request = new RequestController();
         $this->response = new ResponseController();
         $this->router = new RouterController($this->request,$this->response);
-        $this->auth = new AuthController();
-        $this->img = new ImageController();
-
+        $this->auth = new AuthController($this->response);
+        $this->img = new ImageController($this->response);
+        $this->contact = new ContactController($this->response);
     }
 
     public function run()
