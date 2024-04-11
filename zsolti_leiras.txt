@@ -44,3 +44,24 @@ AuthController:
 -passwordCompare() – Összeveti a felhasználó által megadott jelszó kódolt értékét az adatbázisban tárolttal. Igaz/hamis értékekkel tér vissza.
 -hashPassword($pw) – bcrypt kódolja a $pw változóban kapott értéket, majd visszatér a kódolt szöveggel.
 -getUserData($username, $conn) – Lekérdezi az adatbázisból a $username paraméterből kapott felhasználót. Találat esetén visszatér a felhasználó adataival, egyéb esetben ’hamis’ értékkel tér vissza.
+
+Kapcsolati űrlap (ContactController)
+Alapelve: A weboldal rendelkezik egy kapcsolat felvételi űrlappal. (/contact)
+A beérkezett kapcsolat felvételi üzenetek az oldal által használt MySQL adatbázisba kerülnek mentésre.
+Regisztrált és nem regisztrált felhasználók egyaránt kitölthetik az űrlapot.
+Megvalósítás:
+Az ApplicatonController példányosítja az ContactController osztályt.  Az index.php-ben előre definiáltak szerint a /sendcontactform POST kéréseket az ContactController send() eljárása kezeli le.
+Az ContactController beimportálja és példányosítja a DatabaseController-t, amely felelős a MySQLi kapcsolatért.
+ContactController
+- send() -  Kapott és elvárt adatok hiányosságának ellenőrzése, majd mentés adatbázisba.
+- getMessage() -  Eddigi üzenetek lekérdezése az adatbázisból.
+
+Galéria - képfeltötés (ImageController)
+Alapelve: A weboldal rendelkezik egy fotó galériával. (/gallery)
+A fényképeket a weboldal egy kijelölt mappából (Content/Images/Gallery), dinamikusan tölti be.
+Regisztrált felhasználók tölthetnek fel képeket. (Fájl méret < 5MB, JPG,PNG,GIF)
+Megvalósítás:
+Az ApplicatonController példányosítja az ImageController osztályt.  Az index.php-ben előre definiáltak szerint a /uploadimg POST kéréseket az ImageController upload() eljárása kezeli le.
+ImageController
+- upload() – Beérkezett adatokat ellenőrzi (van-e csatolmány, csatolmány mérete, kiterjesztése), majd feltölti azt a megadott mappába. 
+
