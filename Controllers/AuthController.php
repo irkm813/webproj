@@ -14,7 +14,7 @@ class AuthController
     public function register()
     {
         $conn = $this->db->connect();
-        if (isset($_POST["first_name"]) && isset($_POST["last_name"]) && isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["password_confirmation"])) {
+        if (isset($_POST["first_name"]) && isset($_POST["last_name"]) && isset($_POST["password"]) && isset($_POST["password_confirmation"])) {
             if ($_POST["password"] == $_POST["password_confirmation"]) {
                 $pw = $this->hashPassword($_POST['password']);
                 if ($conn) {
