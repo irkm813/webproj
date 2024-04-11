@@ -33,38 +33,19 @@ class RouterController
         $method = $this->request->getMethod();
 
         $callback = $this->routes[$method][$path] ?? false;
+        
         if ($callback === false) {
             $this->response->setHttpStatus(404);
-            return $this->renderView('_404');
+            return $this->response->renderView('_404');
             exit;
         }
         if (is_string($callback)) {
-            return $this->renderView($callback);
+            return $this->response->renderView($callback);
         }
         if (is_array($callback)) {
-            $callback[0] = new $callback[0]();
+            $callback[0] = new $callback[0]($this->response);
+
         }
-        return call_user_func($callback);
-    }
-
-    public function renderView($view)
-    {
-        $renderlayout = $this->renderLayout();
-        $renderView = $this->renderOnlyView($view);
-        return str_replace('{{content}}', $renderView, $renderlayout);
-    }
-
-    public function renderLayout()
-    {
-        ob_start();
-        include_once "./Views/layout/layout.php";
-        return ob_get_clean();
-    }
-
-    public function renderOnlyView($view)
-    {
-        ob_start();
-        include_once "./Views/$view.php";
-        return ob_get_clean();
+        return call_user_func($callback,);
     }
 }
