@@ -193,6 +193,37 @@ a, a:visited, a:hover, a:active {
 .info-area iframe{
     border-radius: 2em;
 }
+
+.comment-box{
+    margin:1em 1em 2em 1em;
+    padding:1em;
+    border: 1px solid;
+    border-color: rgb(15, 30, 73);
+    background-color: #f7ecc640;
+    border-radius: 1em;
+    box-shadow: 5px 5px 10px;
+    height: auto;
+    display: inline-block;  
+}
+
+.comment-box div:nth-child(2){
+    font-weight: 700;
+    color: rgb(15, 30, 73);
+}
+
+.comment-box div{
+    margin-bottom: 0.2em;
+}
+
+.comment-box p{
+    background-color: white;
+    width: 95%;
+    margin: auto;
+    border-radius: 1em;
+    display: block;
+    border: 1px solid rgb(15,30,73);
+    margin-top:1em;
+}
   
 @media screen and (max-width: 768px) {
 

@@ -8,11 +8,11 @@
                         <form name="contacts-form" class="requires-validation" method="post" action="/sendcontactform" onsubmit="return validateForm()">
 
                             <div class="col-md-12" id="lastNameContainer">
-                               <input class="form-control" type="text" name="lastName" placeholder="Vezetéknév">
+                               <input class="form-control" type="text" name="last_name" placeholder="Vezetéknév">
                             </div>
                             
                             <div class="col-md-12" id="firstNameContainer">
-                               <input class="form-control" type="text" name="firstName" placeholder="Keresztnév">
+                               <input class="form-control" type="text" name="first_name" placeholder="Keresztnév">
                             </div>
 
                             <div class="col-md-12" id="emailContainer">

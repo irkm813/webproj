@@ -17,7 +17,7 @@ class ContactController
     {
         $conn = $this->db->connect();
         if ($conn) {
-            if (isset($_POST["lastName"]) && isset($_POST["firstName"]) && isset($_POST["email"]) && isset($_POST["phone"]) && isset($_POST["message"])) {
+            if (isset($_POST["last_name"]) && isset($_POST["first_name"]) && isset($_POST["email"]) && isset($_POST["phone"]) && isset($_POST["message"])) {
                 try {
                     $user = (isset($_SESSION['user']['id'])) ? $_SESSION['user']['id'] : 'null';
                     $conn->query("INSERT INTO cstpteam.emails (created_at, created_by, email, phone, web, content) VALUES('" . date("Y-m-d h:i:s") . "'," . $user . ", '" . $_POST["email"] . "', '" . $_POST["phone"] . "', '','" . $_POST["message"] . "')");
