@@ -65,3 +65,11 @@ Az ApplicatonController példányosítja az ImageController osztályt.  Az index
 ImageController
 - upload() – Beérkezett adatokat ellenőrzi (van-e csatolmány, csatolmány mérete, kiterjesztése), majd feltölti azt a megadott mappába. 
 
+Fejlesztési lehetőségek:
+- Teljes MVC modell felépítése. 
+- Authentication middleware 
+- JWT Token autentikáció
+- Error handlingController
+- Design Komponensek létrehozása, újrahasznosítása -> View tödelése
+- COOKIE alapú login -> "Maradjon bejelentkezve" 
+- AJAX kérések, nem frissülő oldal
