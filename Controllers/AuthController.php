@@ -20,7 +20,7 @@ class AuthController
             if ($_POST["password"] == $_POST["password_confirmation"]) {
                 $pw = $this->hashPassword($_POST['password']);
                 if ($conn) {
-                    if (!$this->getUserData($_POST["email"], $conn)) {
+                    if (!$this->getUserData($_POST["username"], $conn)) {
                         try {
                             if ($result = $conn->query("INSERT INTO cstpteam.users (username, password, last_name, first_name) VALUES ('" . $_POST["username"] . "','" . $pw . "','" . $_POST["last_name"] . "','" . $_POST["first_name"] . "')")) {
                                 $this->response->redirect("/register?error=0");

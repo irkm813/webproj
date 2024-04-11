@@ -1,13 +1,13 @@
-function ValidateFunc(item){
+function ValidateFunc(item, formName){
 
 
-    let formName = "contacts-form";
+
     let fieldValue = document.forms[formName][item].value;
 
-    let parentDiv = document.getElementById(item+"Container");
+    let parentDiv = document.getElementById(item+"_container");
     let childDiv = parentDiv.querySelector(".alert");
 
-    if (fieldValue==""){
+    if (fieldValue=="" || fieldValue==" "){
 
         if (childDiv === null){
 
@@ -17,11 +17,9 @@ function ValidateFunc(item){
             warnDiv.classList.add("alert-danger");
             warnDiv.appendChild(node);
             parentDiv.appendChild(warnDiv);
-
-            return false;
         }
 
-        
+        return false;
     }
 
     else if(item=="email"){
@@ -68,6 +66,28 @@ function ValidateFunc(item){
         }
     }
 
+    else if(item=="username"){
+        
+        if (childDiv !== null){
+            childDiv.remove();
+        }
+    
+        let isEmailValid = fieldValue.match(
+            /^.{0,15}$/
+          );
+
+        if (isEmailValid === null){
+            let warnDiv = document.createElement("div");
+            const node = document.createTextNode("A felhasználónév túl hosszú (max 15 karakter)");
+            warnDiv.classList.add("alert");
+            warnDiv.classList.add("alert-danger");
+            warnDiv.appendChild(node);
+            parentDiv.appendChild(warnDiv);
+
+            return false;
+        }
+    }
+
     else{
         if (childDiv !== null){
             childDiv.remove();
@@ -76,15 +96,33 @@ function ValidateFunc(item){
 
 }
 
-function validateForm(){
+function validateContactsForm(){
 
-    let validateList = ["email","lastName", "firstName", "phone", "message"];
+    let validateList = ["email","last_name", "first_name", "phone", "message"];
 
     let isFormValid = true;
 
     for (item in validateList){
         
-        if (ValidateFunc(validateList[item]) === false){
+        if (ValidateFunc(validateList[item],"contacts-form") === false){
+            isFormValid = false
+        };
+
+    }
+
+    return isFormValid;
+    
+}
+
+function validateRegisterForm(){
+
+    let validateList = ["username","last_name", "first_name", "password", "password_confirmation"];
+
+    let isFormValid = true;
+
+    for (item in validateList){
+        
+        if (ValidateFunc(validateList[item],"register-form") === false){
             isFormValid = false
         };
 
