@@ -14,13 +14,18 @@ class ResponseController
         header("Location: $url");
     }
     //Normal response
-    public function renderView($view)
+    public function renderView($view,$string="")
     {
-        $renderlayout = $this->renderLayout();
-        $renderView = $this->renderOnlyView($view);
-        return str_replace('{{content}}', $renderView, $renderlayout);
-    }
 
+        $renderlayout = $this->renderLayout();
+        if($string == "") {
+            $renderView = $this->renderOnlyView($view); 
+            return str_replace('{{content}}', $renderView, $renderlayout);
+        }
+        else{
+            return str_replace('{{content}}', $string, $renderlayout);
+        }
+    }
     public function renderLayout()
     {
         ob_start();
@@ -34,4 +39,5 @@ class ResponseController
         include_once "./Views/$view.php";
         return ob_get_clean();
     }
+    
 }

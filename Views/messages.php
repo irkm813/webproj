@@ -7,13 +7,12 @@
             .then((data) => {
                 for (var msg in data) {
                     if (data) {
-                        $name = data[msg][2] != null ? data[msg][6] + " " + data[msg][7] : "Vendég";
+                        let name = data[msg][2] != null ? data[msg][6] + " " + data[msg][7] : "Vendég";
                         let newDiv = document.querySelector("#messages").appendChild(document.createElement("div"));
 
                         newDiv.classList.add("comment-box");
-
                         newDiv.appendChild(document.createElement("div")).textContent = data[msg][1];
-                        newDiv.appendChild(document.createElement("div")).textContent = $name;
+                        newDiv.appendChild(document.createElement("div")).textContent = name;
                         newDiv.appendChild(document.createElement("div")).textContent = data[msg][3];
                         newDiv.appendChild(document.createElement("div")).textContent = data[msg][4];
                         newDiv.appendChild(document.createElement("p")).textContent = data[msg][5];
