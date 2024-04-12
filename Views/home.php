@@ -49,13 +49,6 @@ if ($newsFeed) {
                     <div class="row left article-text">
                         <p><?=$newsItem['content']?></p>
                     </div>
-                    <div class="row">
-                        <div class="col-6 left">
-                            <p>(Még 532 karakter)</p>
-                        </div>
-                        <div class="col-6 right" <p>Tovább</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
