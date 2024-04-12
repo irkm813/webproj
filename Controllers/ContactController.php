@@ -33,7 +33,7 @@ class ContactController
 
     public function success_msg($id){
         if($result = $this->getSingleMessage($id)){
-            $name = $result["first_name"] != null ? $result["first_name"] + " " +$result["last_name"] : "Vendég";
+            $name = $result["first_name"] != null ? $result["first_name"] . " " .$result["last_name"] : "Vendég";
             return "<h1>Üzeneted megkaptuk!</h1><div class='comment-box'><div>{$result["created_at"]}</div><div>{$name}</div><div>{$result["email"]}</div><div>{$result["phone"]}</div><p>{$result["content"]}</p></div>";
         }else{
             return "Hiba történt";
